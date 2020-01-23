@@ -26,7 +26,7 @@ function join_by {
 function report_errors {
   local name="$1"
   local dup="$2"
-  echo "{\"cloneLines\":\"$name\",\"nrTokens\":1,\"nrLines\":1,\"files\":[$dup]}"
+  echo "{\"cloneLines\":\"$name\",\"nrTokens\":6,\"nrLines\":6,\"files\":[$dup]}"
 }
 
 function analyze_file {
@@ -54,10 +54,10 @@ while read -r file; do
   analyze_file "$file"
 done <<< "$codacy_files"
 
-if [ ${#g_final_foo_results[@]} -gt 1 ]; then
+if [ ${#g_final_foo_results[@]} -gt 0 ]; then
   report_errors "foo" "$(join_by ',' ${g_final_foo_results[@]})"
 fi
 
-if [ ${#g_final_bar_results[@]} -gt 1 ]; then
+if [ ${#g_final_bar_results[@]} -gt 0 ]; then
   report_errors "bar" "$(join_by ',' ${g_final_bar_results[@]})"
 fi
