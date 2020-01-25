@@ -1,0 +1,12 @@
+<checkstyle version="4.3">
+    <duplication nrTokens="6" nrLines="6" message="bar">
+        <file name="bar.sh">
+            <property name="startLine" value="1"></property>
+            <property name="endLine" value="2"></property>
+        </file>
+        <file name="bar2.sh">
+            <property name="startLine" value="1"></property>
+            <property name="endLine" value="2"></property>
+        </file>
+    </duplication>
+</checkstyle>
