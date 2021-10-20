@@ -1,4 +1,4 @@
-FROM alpine:3.10.3
+FROM alpine:3.14.2
 
 COPY tool.sh /opt/docker/
 RUN apk add bash jq
